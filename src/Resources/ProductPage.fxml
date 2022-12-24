@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<BorderPane prefHeight="564.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <FlowPane alignment="CENTER" hgap="20.0" orientation="VERTICAL" BorderPane.alignment="CENTER">
+         <children>
+            <FlowPane alignment="CENTER" hgap="20.0" prefHeight="665.0" prefWidth="905.0">
+               <children>
+                  <ImageView fx:id="image" fitHeight="318.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <FlowPane fx:id="main" prefHeight="397.0" prefWidth="265.0" vgap="20.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="80.0" text="ID:" textFill="BLUE" />
+                        <TextField fx:id="id" disable="true" prefHeight="25.0" prefWidth="182.0" />
+                        <Label layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="80.0" text="Name:" textFill="BLUE" />
+                        <TextField fx:id="name" disable="true" layoutX="60.0" layoutY="10.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Label fx:id="role" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="80.0" text="Author:" textFill="BLUE" />
+                        <TextField fx:id="author" disable="true" layoutX="60.0" layoutY="10.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Label layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="80.0" text="Publisher:" textFill="BLUE" />
+                        <TextField fx:id="publisher" disable="true" layoutX="60.0" layoutY="35.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Label layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="80.0" text="Edition:" textFill="BLUE" />
+                        <TextField fx:id="edition" disable="true" layoutX="60.0" layoutY="35.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Label layoutX="10.0" layoutY="64.0" prefHeight="17.0" prefWidth="80.0" text="CopyType:" textFill="BLUE" />
+                        <TextField fx:id="copytype" disable="true" layoutX="60.0" layoutY="60.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Label id="cover" layoutX="10.0" layoutY="149.0" prefHeight="17.0" prefWidth="80.0" text="Cover:" textFill="BLUE" />
+                        <TextField fx:id="cover" disable="true" layoutX="90.0" layoutY="145.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Label id="stock" layoutX="10.0" layoutY="194.0" prefHeight="17.0" prefWidth="80.0" text="Stock:" textFill="BLUE" />
+                        <TextField fx:id="stock" disable="true" layoutX="90.0" layoutY="190.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Label id="price" layoutX="10.0" layoutY="239.0" prefHeight="17.0" prefWidth="80.0" text="Price:" textFill="BLUE" />
+                        <TextField fx:id="price" disable="true" layoutX="90.0" layoutY="235.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Label id="preview" layoutX="10.0" layoutY="239.0" prefHeight="17.0" prefWidth="80.0" text="Preview:" textFill="BLUE" />
+                        <TextField fx:id="preview" disable="true" layoutX="90.0" layoutY="235.0" maxLength="500" prefHeight="36.0" prefWidth="182.0" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane fx:id="main1" prefHeight="563.0" prefWidth="265.0" vgap="20.0">
+                     <children>
+                        <Label fx:id="periodl" prefHeight="17.0" prefWidth="80.0" text="Period:" textFill="BLUE" />
+                        <TextField fx:id="period" disable="true" prefHeight="25.0" prefWidth="182.0" />
+                        <Label fx:id="characl" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="80.0" text="Characters:" textFill="BLUE" />
+                        <TextField fx:id="charac" disable="true" layoutX="60.0" layoutY="10.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Label fx:id="placel" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="80.0" text="Place:" textFill="BLUE" />
+                        <TextField fx:id="place" disable="true" layoutX="60.0" layoutY="10.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Label fx:id="timel" layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="80.0" text="Time:" textFill="BLUE" />
+                        <TextField fx:id="time" disable="true" layoutX="60.0" layoutY="35.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Label fx:id="probleml" layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="80.0" text="Problem:" textFill="BLUE" />
+                        <TextField fx:id="problem" disable="true" layoutX="60.0" layoutY="35.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Label fx:id="topicl" layoutX="10.0" layoutY="64.0" prefHeight="17.0" prefWidth="80.0" text="Topic:" textFill="BLUE" />
+                        <TextField fx:id="topic" disable="true" layoutX="90.0" layoutY="235.0" maxLength="500" prefHeight="27.0" prefWidth="182.0" />
+                     </children>
+                  </FlowPane>
+                  <AnchorPane prefHeight="70.0" prefWidth="641.0">
+                     <children>
+                        <Label fx:id="error" layoutX="230.0" prefHeight="17.0" prefWidth="199.0" textFill="RED" />
+                        <Button fx:id="edit" layoutX="281.0" layoutY="24.0" mnemonicParsing="false" onAction="#update" prefHeight="32.0" prefWidth="98.0" style="-fx-background-color: black;" text="Edit" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </FlowPane>
+         </children>
+      </FlowPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="Controllers.DiscountPageController">
+   <center>
+      <DialogPane prefHeight="113.0" prefWidth="303.0" BorderPane.alignment="CENTER">
+         <header>
+            <Label style="-fx-background-color: #4d0c88;" text="Discount:" textFill="#4dcd88">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/discount.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </header>
+         <content>
+            <FlowPane hgap="30.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="percentage" />
+                  <Button mnemonicParsing="false" onAction="#apply" text="Apply" />
+               </children>
+            </FlowPane>
+         </content>
+      </DialogPane>
+   </center>
+</BorderPane>
