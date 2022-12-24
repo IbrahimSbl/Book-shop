@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CartController">
+   <children>
+      <AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #E96151;">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/myCart.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="109.0" layoutY="30.0" text="My Cart" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <SplitPane layoutX="-2.0" layoutY="80.0" prefHeight="320.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="167.0">
+               <children>
+                  <TableView fx:id="table" editable="true" layoutX="1.0" prefHeight="318.0" prefWidth="278.0" style="-fx-text-fill: lightBlue;">
+                     <columns>
+                        <TableColumn fx:id="bookNameCol" prefWidth="144.4567093849182" sortable="false" text="Book" />
+                        <TableColumn fx:id="priceCol" minWidth="2.4000244140625" prefWidth="129.5432586669922" text="Price" />
+                     </columns>
+                  </TableView>
+                  <ButtonBar layoutX="279.0" layoutY="272.0" prefHeight="40.0" prefWidth="315.0">
+                     <buttons>
+                        <Button mnemonicParsing="false" onAction="#CheckoutButton" style="-fx-background-color: #E96151;" text="Checkout" textFill="WHITE" />
+                        <Button mnemonicParsing="false" onAction="#removeButton" style="-fx-background-color: #E96151;" text="Remove" textFill="WHITE" />
+                     </buttons>
+                  </ButtonBar>
+                  <GridPane layoutX="279.0" prefHeight="266.0" prefWidth="315.0">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <columnConstraints>
+                        <ColumnConstraints maxWidth="157.6" minWidth="0.0" prefWidth="90.0" />
+                        <ColumnConstraints maxWidth="200.0" minWidth="0.0" prefWidth="169.5" />
+                     </columnConstraints>
+                     <children>
+                        <Label text="Total Price:" textFill="#e96151" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Shipping: " textFill="#e96151" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Tax:" textFill="#e96151" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Subtotal: " textFill="#e96151" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="subtotalLabel" prefHeight="53.0" prefWidth="158.0" textAlignment="RIGHT" textFill="#e96151" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="taxLabel" prefHeight="53.0" prefWidth="171.0" textFill="#e96151" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="shippingLabel" prefHeight="53.0" prefWidth="173.0" textFill="#e96151" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totalLabel" prefHeight="53.0" prefWidth="171.0" textFill="#e96151" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <DialogPane prefHeight="130.0" prefWidth="358.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <header>
+            <Label style="-fx-background-color: lightBlue;" text="Salary:" textFill="#bf1f1f">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/salary.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+         </header>
+         <content>
+            <AnchorPane>
+               <children>
+                  <Label fx:id="text" layoutX="10.0" layoutY="6.0" prefHeight="33.0" prefWidth="341.0" textFill="#419aff">
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="done" layoutX="145.0" layoutY="38.0" mnemonicParsing="false" onAction="#back" text="Satisfied😀" />
+               </children>
+            </AnchorPane>
+         </content>
+      </DialogPane>
+   </center>
+</BorderPane>
